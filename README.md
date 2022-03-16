@@ -20,7 +20,8 @@ _参考文章：https://blog.csdn.net/tk1023/article/details/109078613_
 （默认为`C:\Users\**\AppData\Local\Programs\Python\Python3*`）  
 + 注：此版本不需要修改`msedgedriver.exe`文件名
 # 代码修改
->在第40、41行填入自己的账号密码  
+>~~在第40、41行填入自己的账号密码~~  
+>在 `data.xls`中更改(以下代码弃用)
 
     if __name__ == '__main__':
         account = "****"
