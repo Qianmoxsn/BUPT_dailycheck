@@ -10,8 +10,8 @@ Edoptions.add_argument('--disable-gpu')
 Edoptions.add_argument('--headless')
 
 location = "msedgedriver.exe"
-account = os.environ["BUPT_USERNAME"]
-password = os.environ["BUPT_PASSWORD"]
+account = sys.argv[1]
+password = sys.argv[2]
 print("**驱动位置：", location)
 print("**账号：", account)
 print("**密码：", password)
