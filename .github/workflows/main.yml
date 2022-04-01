@@ -10,7 +10,7 @@ on:
   #pull_request:
   # branches: [ main ]
   schedule:
-    - cron: '05 00,04,10 * * *'
+    - cron: '05 04,10,16 * * *'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
