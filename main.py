@@ -12,9 +12,9 @@ Edoptions.add_argument('--headless')
 location = "msedgedriver.exe"
 account = sys.argv[1]
 password = sys.argv[2]
-print("**驱动位置：", location)
-print("**账号：", account)
-print("**密码：", password)
+print("**DriverLocation：", location)
+print("**Account：", account)
+print("**Password：", password)
 
 driver = webdriver.Edge(executable_path=location, options=Edoptions)
 
@@ -36,7 +36,7 @@ def login(username, password):
     while report_url == login_url:
         report_url = driver.current_url
         sleep(1)
-    print("\n\n登陆成功: ", report_url)
+    print("\n\nLogin_Success: ", report_url)
     return True
 
 
@@ -53,7 +53,7 @@ def report():
     # 确认提交
     btn_has_submit = driver.find_element(by=By.XPATH, value="//*[@id='wapcf']/div/div[2]/div[2]")
     btn_has_submit.click()
-    print("\n\n!!打卡成功!!")
+    print("\n\n!!Report_Succees!!")
 
 
 if __name__ == '__main__':
