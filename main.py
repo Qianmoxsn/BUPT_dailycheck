@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 Edoptions = webdriver.EdgeOptions
-Edoptions.add_argument('--no-sandbox')
+#Edoptions.add_argument('--no-sandbox')
 Edoptions.add_argument('window-size=1920x1080')
 Edoptions.add_argument('--disable-gpu')
 Edoptions.add_argument('--headless')
