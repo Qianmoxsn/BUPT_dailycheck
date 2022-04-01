@@ -1,19 +1,22 @@
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import xlrd
 
-data = xlrd.open_workbook_xls("data.xls")
-st1 = data.sheet_by_index(0)
-location = st1.cell_value(0, 1)
-account = st1.cell_value(1, 1)
-password = st1.cell_value(2, 1)
+Edoptions = webdriver.EdgeOptions
+Edoptions.add_argument('--no-sandbox')
+Edoptions.add_argument('window-size=1920x1080')
+Edoptions.add_argument('--disable-gpu')
+Edoptions.add_argument('--headless')
+
+location = "msedgedriver.exe"
+account = os.environ["BUPT_USERNAME"]
+password = os.environ["BUPT_PASSWORD"]
 print("**驱动位置：", location)
 print("**账号：", account)
 print("**密码：", password)
 
-driver = webdriver.Edge(executable_path=location)
-#driver.minimize_window()
+driver = webdriver.Edge(executable_path=location, options=Edoptions)
+
 driver.get(r'https://auth.bupt.edu.cn/authserver/login?service=https%3A%2F%2Fapp.bupt.edu.cn%2Fa_bupt%2Fapi%2Fsso'
            r'%2Fcas%3Fredirect%3Dhttps%253A%252F%252Fapp.bupt.edu.cn%252Fsite%252Fncov%252Fxisudailyup%26from%3Dwap')
 
