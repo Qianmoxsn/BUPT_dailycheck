@@ -12,9 +12,9 @@ Edoptions.add_argument('--headless')
 location = "msedgedriver.exe"
 account = sys.argv[1]
 password = sys.argv[2]
-print("**DriverLocation：", location)
-print("**Account：", account)
-print("**Password：", password)
+print("**DriverLocation:", location)
+print("**Account:", account)
+print("**Password:", password)
 
 driver = webdriver.Edge(executable_path=location, options=Edoptions)
 
